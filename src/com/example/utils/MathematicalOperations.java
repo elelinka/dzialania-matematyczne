@@ -1,26 +1,23 @@
 package com.example.utils;
 
-import com.example.model.MathComponent;
-
 public class MathematicalOperations {
-    private static MathComponent component;
 
-    public static double sum() {
-        return component.getFirstNumber() + component.getSecondNumber();
+    public static double sum(int firstNumber, int secondNumber) {
+        return firstNumber + secondNumber;
     }
 
-    public static double subtract() {
-        return component.getFirstNumber() - component.getSecondNumber();
+    public static double subtract(int firstNumber, int secondNumber) {
+        return firstNumber - secondNumber;
     }
 
-    public static double multiply() {
-        return component.getFirstNumber() * component.getSecondNumber();
+    public static double multiply(int firstNumber, int secondNumber) {
+        return firstNumber * secondNumber;
     }
 
-    public static double divide() {
-        if (component.getFirstNumber() == 0 || component.getSecondNumber() == 0) {
+    public static double divide(int firstNumber, int secondNumber) {
+        if (firstNumber == 0 || secondNumber == 0) {
             throw new ArithmeticException("nie można dzielić przez 0");
         }
-        return component.getFirstNumber() / component.getSecondNumber();
+        return firstNumber / secondNumber;
     }
 }

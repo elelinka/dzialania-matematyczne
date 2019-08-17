@@ -5,10 +5,9 @@ import com.example.model.MathComponent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class MathFileReader {
-    public static String getMathFile(String path) {
+    public static MathComponent[] getMathFile(String path) {
         MathComponent[] components = new MathComponent[4];
         int index = 0;
         try {
@@ -23,7 +22,6 @@ public class MathFileReader {
         } catch (IOException e) {
             System.err.println("Nie odnaleziono pliku.");
         }
-
-        return Arrays.toString(components);
+        return components;
     }
 }
