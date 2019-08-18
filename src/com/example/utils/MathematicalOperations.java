@@ -15,9 +15,6 @@ public class MathematicalOperations {
     }
 
     public static double divide(int firstNumber, int secondNumber) {
-        if (firstNumber == 0 || secondNumber == 0) {
-            throw new ArithmeticException("nie można dzielić przez 0");
-        }
         return firstNumber / secondNumber;
     }
 }

@@ -11,7 +11,8 @@ public class Main {
         String pathToRead = "C:\\Users\\grego\\Desktop\\dzialania.txt";
         String pathToWrite = "C:\\Users\\grego\\Desktop\\dzialania z wynikiem.txt";
         MathComponent[] contents = MathFileReader.getMathFile(pathToRead);
-        System.out.println(Arrays.toString(contents));
+        System.out.println("Zawartość pliku: " + Arrays.toString(contents));
+        System.out.println("Obliczenia:");
         MathFileWriter.writeMathFile(pathToWrite, contents);
     }
 }

@@ -36,26 +36,6 @@ public class MathComponent {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MathComponent)) return false;
-
-        MathComponent component = (MathComponent) o;
-
-        if (firstNumber != component.firstNumber) return false;
-        if (secondNumber != component.secondNumber) return false;
-        return sign.equals(component.sign);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = firstNumber;
-        result = 31 * result + secondNumber;
-        result = 31 * result + sign.hashCode();
-        return result;
-    }
-
-    @Override
     public String toString() {
         return firstNumber + sign + secondNumber;
     }
